@@ -1,6 +1,9 @@
 from flask import Flask
 from flask import url_for
+from flask import request
 from markupsafe import escape
+
+# flask --app __init__.py run
 
 app = Flask(__name__)
 
@@ -15,6 +18,15 @@ def bye_world():
 @app.route('/<name>')
 def hi_kevin(name):
     return f'Hi {escape(name)}'
+
+@app.route("/login", methods=["GET", "POST"])
+def login():
+    payload = "wapapapalala"
+    if request.method == 'POST':
+        return f'Hi {payload}'
+    else:
+        return f"SOOOOPAALALALA"
+
 
 # URL Building
 if __name__ == '__main__':
