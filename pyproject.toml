@@ -1,0 +1,19 @@
+[project]
+name = "kevatr"
+version = "0.1.0"
+description = ""
+authors = [
+    {name = "Kevin Tran",email = "kevtran04@gmail.com"}
+]
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "pylint (==3.1.0)",
+    "flask (==3.0.3)",
+    "python-dotenv (==1.1.0)"
+]
+
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
