@@ -32,3 +32,7 @@ def login():
 if __name__ == '__main__':
     with app.test_request_context():
         print(url_for('hi_kevin', name='jill'))
+
+# Static Files
+
+url_for("static", filename="style.css")
