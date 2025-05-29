@@ -27,7 +27,7 @@ jobs:
         echo "$HOME/.local/bin" >> $GITHUB_PATH
     - name: Install Dependencies
       run: |
-        poetry install
+        poetry install --no-root
     - name: Linting with Pylint
       run: |
         poetry run pylint backend/
